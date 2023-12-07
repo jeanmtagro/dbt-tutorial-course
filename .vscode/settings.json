@@ -27,5 +27,5 @@
 	"git.enableSmartCommit": true,
     "git.confirmSync": false,
     "dbt.queryLimit": 500,
-    "dbt.enableNewQueryPanel": false,
+    "dbt.enableNewQueryPanel": true,
 }
