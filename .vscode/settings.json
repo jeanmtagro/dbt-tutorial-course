@@ -1,0 +1,31 @@
+{
+    // Associated the right file types with the right VSCode extensions
+    "files.associations": {
+        "*.sql": "jinja-sql"
+    },
+
+    // CRUCIAL - you need to change this to terminal.integrated.env.[osx|windows|linux] depending on your system
+    // and point it to the folder where your profiles directory is stored!
+    "terminal.integrated.env.osx": {
+        "DBT_PROFILES_DIR": "~/.dbt",
+		"BIGQUERY_PROJECT": "orbital-scene-403016"
+    },
+
+
+    // Automatically trimming whitespace is quite helpful
+    "files.trimTrailingWhitespace": true,
+
+    // Personal preference: makes error / changed / new files different colours
+    "workbench.colorCustomizations": {
+        "list.errorForeground": "#e54135",
+        "gitDecoration.modifiedResourceForeground": "#32bed1",
+        "gitDecoration.untrackedResourceForeground": "#7dd47a"
+    },
+
+    // Git
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "dbt.queryLimit": 500,
+    "dbt.enableNewQueryPanel": false,
+}
