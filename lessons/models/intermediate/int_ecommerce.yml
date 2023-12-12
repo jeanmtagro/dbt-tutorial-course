@@ -39,7 +39,7 @@ models:
         tests:
           - not_null
 
-      - name: product_retail_price
+      - name: retail_price
         description: "How much the product retails for on the online store"
         tests:
           - not_null

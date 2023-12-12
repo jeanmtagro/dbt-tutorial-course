@@ -37,3 +37,9 @@ models:
     +persist_docs: # Writes all of our column descriptions into BigQuery!
       relation: true
       columns: true
+
+tests:
+  lessons:
+    # better to set warn by default here to avoid breaking pipeline and set 'error' for
+    # critic ones in model level
+    +severity: warn

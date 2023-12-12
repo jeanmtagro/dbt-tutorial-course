@@ -10,8 +10,11 @@ models:
       - name: order_id
         description: ""
         tests:
-          - not_null
-          - unique
+          - not_null:
+          # to demonstrate we can set severity under specific rule in a given test
+              severity: error
+          - unique:
+              severity: error
 
       - name: user_id
         tests:
@@ -27,7 +30,8 @@ models:
                 - Cancelled
                 - Shipped
                 - Complete
-                - Returned
+                - Returne
+              severity: warn
 
       - name: created_at
         description: "When the order was created"
@@ -55,4 +59,10 @@ models:
       - name: num_items_ordered
         description: "Number of items in the order"
         tests:
-          - not_null
+          - not_null:
+              # ATTENTION : config below appears only if test failed
+              severity: error
+              error_if: ">1000"
+              warn_if: ">2"
+
+
